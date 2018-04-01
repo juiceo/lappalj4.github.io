@@ -1,7 +1,10 @@
 <html>
 
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
 <body class="inactive">
-	<meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=0">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
 	 crossorigin="anonymous"></script>
 	<script>
@@ -116,27 +119,44 @@
 		@charset "UTF-8";
 		body {
 			width: 100%;
-			min-height: 100%;
-			min-width: 400px;
+			min-height: 600px;
 			background: #000;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			justify-content: center
+			justify-content: center;
+			margin: 0;
+		}
+
+		* {
+			box-sizing: border-box;
 		}
 
 		.page-content {
-			width: 300px;
+			width: 100%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			justify-content: center
+			justify-content: center;
+			padding: 1rem;
+		}
+
+		#content {
+			width: 300px;
+		}
+
+		#top {
+			max-width: 500px;
+		}
+
+		#progress {
+			max-width: 500px;
 		}
 
 		#egg-wrapper,
 		.content {
-			height: 400px;
-			width: 400px
+			height: 300px;
+			width: 300px
 		}
 
 		.hide-when-inactive {
@@ -1517,12 +1537,14 @@
 		}
 	</style>
 	<div class="page-content">
-		<h1 class="title hide-when-inactive show-when-resetting">Riko muna ja löydä pääsiäisyllätys!</h1>
-		<p class="subtitle hide-when-inactive">Olet nyt myös käyttänyt munan klikkailuun yli 10 minuuttia elämästäsi</p>
-		<div class="content">
+		<div id="top">
+			<h1 class="title hide-when-inactive show-when-resetting">Riko muna ja löydä pääsiäisyllätys!</h1>
+			<p class="subtitle hide-when-inactive">Olet nyt myös käyttänyt munan klikkailuun yli 10 minuuttia elämästäsi</p>
+		</div>
+		<div id="content" class="content">
 			<div id="egg-wrapper">
 				<svg class="egg" id="egg-1" viewBox="-100 -100 1600 1600" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-				 width="400px" height="400px" enable-background="new 0 0 1400 1400">
+				 width="300px" height="300px" enable-background="new 0 0 1400 1400">
 					<rect id="ee-background" x="0" y="0" width="1400" height="1400" style="fill: white; fill-opacity: 0; pointer-events: none;"
 					/>
 					<g transform="matrix(3.896668672561645, 0, 0, 3.896668672561645, -295.7225472534748, -2125.294908795846)">
@@ -1544,7 +1566,7 @@
 					</g>
 				</svg>
 				<svg class="egg hidden" id="egg-2" viewBox="-50 -50 1600 1600" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-				 width="400px" height="400px" enable-background="new 0 0 1400 1400">
+				 width="300px" height="300px" enable-background="new 0 0 1400 1400">
 					<g transform="matrix(3.915905714035034, 0, 0, 3.915905714035034, -1934.2376185818225, -2132.0915788926823)">
 						<path class="tint-normal" d="M704.8539429,547.5686035c-71.8707275,0.2251587-130.956665,88.9873047-139.394043,185.4257202&#10;&#9;&#9;l8.7525635,4.4938965l20.7699585,5.8103027l22.1522827-14.1908569l1.0384521-0.6651001l1.0058594,0.2249146l22.8109131,5.1030273&#10;&#9;&#9;l22.8625488,0.4232178l0.2972412,0.0055542l0.1924438,0.1148682l22.6299438,13.5003662l-23.3062744-11.6459351&#10;&#9;&#9;l-22.861084,1.2813721l-0.1176147,0.0064697l-0.2523193-0.0369873l-22.0241699-3.229126l-21.6706543,16.2779541&#10;&#9;&#9;l-1.2360229,0.9284058l-1.7904053-0.3596802l-23.2905884-4.6794434l-0.2911377-0.0585327l-0.5924683-0.2504272&#10;&#9;&#9;l-5.7947388-2.4489746c-0.2200317,4.5529785-0.3329468,9.1156006-0.3192749,13.6810303&#10;&#9;&#9;c0.3458252,105.2803955,63.7615356,143.2079468,141.6705322,142.944397&#10;&#9;&#9;c77.8817139-0.2438965,140.750061-38.5754395,140.4180908-143.8377075&#10;&#9;&#9;C846.1557617,651.1049805,782.7771606,547.333374,704.8539429,547.5686035z"
 						 transform="matrix(1, 0, 0, 1, 0, 0)" />
@@ -1567,7 +1589,7 @@
 					</g>
 				</svg>
 				<svg class="egg hidden" id="egg-3" viewBox="-50 -50 1600 1600" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-				 width="400px" height="400px" enable-background="new 0 0 1400 1400">
+				 width="300px" height="300px" enable-background="new 0 0 1400 1400">
 					<g transform="matrix(3.7843527793884277, 0, 0, 3.7843527793884277, -3478.493267043305, -2029.6925963073809)">
 						<path d="M 927.4497680664062 751.9998779296875 L 962.03515625 762.0272216796875 L 927.4497680664062 759.32421875 Z" class="tint-dark"
 						 transform="matrix(1, 0, 0, 1, 0, 0)" />
@@ -1590,7 +1612,7 @@
 					</g>
 				</svg>
 				<svg class="egg hidden" id="egg-4" viewBox="0 0 1400 1400" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-				 width="400px" height="400px" enable-background="new 0 0 1400 1400">
+				 width="300px" height="300px" enable-background="new 0 0 1400 1400">
 					<g transform="matrix(3.1320252418518066, 0, 0, 3.1320252418518066, -2462.779383763937, -163.24651729354179)">
 						<path d="M 1089.598165 163.595596 A 7.837667 9.220784 0 0 1 1081.760498 172.816381 A 7.837667 9.220784 0 0 1 1073.922832 163.595596 A 7.837667 9.220784 0 0 1 1081.760498 154.374812 A 7.837667 9.220784 0 0 1 1089.598165 163.595596 Z"
 						 transform="matrix(0.988312304019928, -0.1524433046579361, 0.1524433046579361, 0.988312304019928, -12.295671463012695, 166.81919860839844)"
