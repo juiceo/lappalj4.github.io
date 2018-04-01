@@ -13,7 +13,7 @@
 
 			var pressCount = 0;
 			var totalPressCount = 0;
-			var required = 20;
+			var required = 100;
 			startTime = Date.now();
 
 			var $progressbar = $('#progress-bar');
@@ -38,10 +38,6 @@
 				var progress = 100 * pressCount / required;
 
 				$progressbar.css({ width: (progress) + '%' });
-
-				if (totalPressCount === 395) {
-					window.alert('Jos kärsit epilepsiasta, nyt voisi olla hyvä aika lopettaa :D');
-				}
 
 				if (progress > 25 && progress <= 50) {
 					$eggs.addClass('hidden');
@@ -1714,7 +1710,7 @@
 			}
 		}
 	</style>
-	<audio id="sax">
+	<audio id="sax" loop>
 		<source src="music.mp3" type="audio/mpeg">
 	</audio>
 	<div id="effects-wrapper">
